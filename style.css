@@ -167,6 +167,8 @@ header::before {
     header {
         background-attachment: scroll; /* Disables parallax on smaller screens */
         padding: 80px 15px; /* Adjusts padding for smaller screens */
+        background-size: cover;
+        height: auto;
     }
 
     .hero h1 {
