@@ -3,141 +3,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elektro Damas.</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        .card-img-top {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-
-        .img-container {
-            position: relative;
-            text-align: center;
-            border: 0;
-            box-shadow: none;
-            box-sizing: 0;
-        }
-
-        .bg-image {
-            background-image: url('./img/elektrodamas_img1.png');
-            background-size: cover;
-            background-position: center;
-            filter: blur(1px);
-            height: 500px;
-        }
-
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.4);
-        }
-
-        .text-container {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: rgb(210, 200, 200);
-            text-shadow: 1px 1px 2px black;
-            text-align: justify;
-        }
-    </style>
+    <link href="style.css" rel="stylesheet">
+    <title>ElektroDamas - Your Trusted Electrician</title>
 </head>
 <body>
-
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item"><a class="nav-link" href="#about">Über uns</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#services">Leistungen</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Kontakt</a></li>
-                </ul>
-            </div>
+    <header>
+        <div class="hero">
+            <h1>Wellkommen bei ElektroDamas</h1>
+            <p>Ihr zuverlässiger Partner für alle Elektrolösungen</p>
+            <a href="#services" class="btn">Unsere Leistungen</a>
         </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#about">Über uns</a></li>
+            <li><a href="#services">Leistungen</a></li>
+            <li><a href="#contact">Kontakt</a></li>
+        </ul>
     </nav>
-
-    <div class="container py-5" id="services">
-        <h2 class="text-center mb-4">Unsere Leistungen</h2>
-        <div class="row">
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="card">
-                    <img src="./img/pic1.png" class="card-img-top" alt="Wiring">
-                    <div class="card-body">
-                        <h5 class="card-title text-center">Elektroinstallation</h5>
-                        <p class="card-text">Bei Neubau, Altbausanierung oder Modernisierung sind wir für die elektrische Grundinstallation Ihr zuverlässiger Fachhandwerker. Wir verstehen unser Handwerk von der Planung, über die Beratung bis hin zur Installation oder Instandsetzung und versorgen Sie zuverlässig mit Strom für Ihre Projekte.</p>
+    <main>
+        <section id="about">
+            <h2>Über uns</h2>
+            <p>Planung, Service, Termintreue und Zuverlässigkeit werden bei uns in allen Bereichen großgeschrieben! Ganz gleich, ob Kundendienst, Neu- oder Umbau - wir von Elektro Damas sind an Ihrer Seite. Mit professionellem Service rund um Elektroinstallationen und zahlreichen weiteren Leistungen überzeugen wir unsere Kund:innen in der Region und Umgebung. Sowohl für Privatkund:innen als auch für Gewerbe- und Industriekund: innen sind wir der Elektro-Partner des Vertrauens.</p>
+        </section>
+        <!-- <section id="services">
+            <h2>Unsere Leistungen</h2>
+            <ul class="services-list">
+                <li>
+                    <h3>Sprechanlagen</h3>
+                    <p>in Türkommunikations-System bietet Lösungen für alle Anforderungen. Die technischen Lösungen reichen von modernen Türsprechanlagen mit und ohne Videofunktion bis zur schlüssellosen Zugangskontrolle mit flexiblen Bedienmöglichkeiten durch Einbindung in IP-Netzwerke und vieles mehr.</p>
+                </li>
+                <li>
+                    <h3>E-Mobilität</h3>
+                    <p>In Verbindung mit Photovoltaikanlage besteht die Möglichkeit mit Photovoltaik erzeugten Strom um sowohl klimaschonend als auch kostengünstig zu fahren. Wir stehen dabei an Ihrer Seite ob es in Verbindung mit Photovoltaikanalögen oder Ohne um Ihnen dabei zu helfen.</p>
+                </li>
+                <li>
+                    <h3>Photovoltaik</h3>
+                    <p>Um sowohl einen Beitrag bei der Energiewende und dem Umweltschutz zu leisten als auch die Stromkosten für das Eigenheim sowie den Betrieb zu höchstmöglich zu senken, ist die Anschaffung von Photovoltaikanlagen von Bedeutung. Wir beraten, planen und Installieren ihre Photovoltaikanlage für Privat -und Gewerbekunden.</p>
+                </li>
+                <li>
+                    <h3>Elektroinstallation</h3>
+                    <p>Bei Neubau, Altbausanierung oder Modernisierung sind wir für die elektrische Grundinstallation Ihr zuverlässiger Fachhandwerker. Wir verstehen unser Handwerk von der Planung, über die Beratung bis hin zur Installation oder Instandsetzung und versorgen Sie zuverlässig mit Strom für Ihre Projekte.</p>
+                </li>
+            </ul>
+        </section> -->
+        <section id="services">
+            <h2>Unsere Leistungen</h2>
+            <ul>
+                <li>
+                    <div class="card">
+                        <div class="front" style="background-image: url('imgs/pic1.png');">
+                            <div class="title">Sprechanlagen</div>
+                        </div>
+                        <div class="back">
+                            <h3>Sprechanlagen</h3>
+                            <p>Moderne Türkommunikations-Systeme mit Videofunktion und mehr.</p>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="card">
-                    <img src="./img/pic1.png" class="card-img-top" alt="Installations">
-                    <div class="card-body">
-                        <h5 class="card-title text-center">Photovoltaik</h5>
-                        <p class="card-text text-left">Um sowohl einen Beitrag bei der Energiewende und dem Umweltschutz zu leisten als auch die Stromkosten für das Eigenheim sowie den Betrieb zu höchstmöglich zu senken, ist die Anschaffung von Photovoltaikanlagen von Bedeutung. Wir beraten, planen und Installieren ihre Photovoltaikanlage für Privat -und Gewerbekunden.</p>
+                </li>
+                <li>
+                    <div class="card">
+                        <div class="front" style="background-image: url('imgs/pic2.png');">
+                            <div class="title">E-Mobilität</div>
+                        </div>
+                        <div class="back">
+                            <h3>E-Mobilität</h3>
+                            <p>Nachhaltige Lösungen für klimaschonendes Fahren.</p>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="card">
-                    <img src="./img/pic2.png" class="card-img-top" alt="Repairs">
-                    <div class="card-body">
-                        <h5 class="card-title text-center">E-Mobilität</h5>
-                        <p class="card-text text-left">In Verbindung mit Photovoltaikanlage besteht die Möglichkeit mit Photovoltaik erzeugten Strom um sowohl klimaschonend als auch kostengünstig zu fahren. Wir stehen dabei an Ihrer Seite ob es in Verbindung mit Photovoltaikanalögen oder Ohne um Ihnen dabei zu helfen.</p>
+                </li>
+                <li>
+                    <div class="card">
+                        <div class="front" style="background-image: url('imgs/pic1.png');">
+                            <div class="title">Photovoltaik</div>
+                        </div>
+                        <div class="back">
+                            <h3>Photovoltaik</h3>
+                            <p>Effiziente Anlagen für die Energiewende und Kostensenkung.</p>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="card">
-                    <img src="./img/pic1.png" class="card-img-top" alt="Installations">
-                    <div class="card-body">
-                        <h5 class="card-title text-center">Sprechanlagen</h5>
-                        <p class="card-text text-left">in Türkommunikations-System bietet Lösungen für alle Anforderungen. Die technischen Lösungen reichen von modernen Türsprechanlagen mit und ohne Videofunktion bis zur schlüssellosen Zugangskontrolle mit flexiblen Bedienmöglichkeiten durch Einbindung in IP-Netzwerke und vieles mehr.</p>
+                </li>
+                <li>
+                    <div class="card">
+                        <div class="front" style="background-image: url('imgs/pic2.png');">
+                            <div class="title">Elektroinstallation</div>
+                        </div>
+                        <div class="back">
+                            <h3>Elektroinstallation</h3>
+                            <p>Professionelle Installationen für Neubau und Modernisierung.</p>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="img-container">
-        <div class="bg-image"></div>
-        <div class="overlay"></div>
-        <div class="text-container">
-            <h2 class="text-center">Über uns</h2>
-            <p class="text-left">Planung, Service, Termintreue und Zuverlässigkeit werden bei uns in allen Bereichen großgeschrieben! Ganz gleich, ob Kundendienst, Neu- oder Umbau - wir von Elektro Damas sind an Ihrer Seite. Mit professionellem Service rund um Elektroinstallationen und zahlreichen weiteren Leistungen überzeugen wir unsere Kund:innen in der Region und Umgebung. Sowohl für Privatkund:innen als auch für Gewerbe- und Industriekund: innen sind wir der Elektro-Partner des Vertrauens.</p>
-        </div>
-    </div>
-
-    <div class="container mt-4 text-center" id="contact">
-        <div class="card p-4">
-            <h3>Schreiben Sie uns</h3>
-            <form>
-                <div class="mb-3">
-                    <input type="text" class="form-control" name="name" placeholder="Name" required>
-                </div>
-                <div class="mb-3">
-                    <input type="email" class="form-control" name="email" placeholder="Email" required>
-                </div>
-                <div class="mb-3">
-                    <textarea class="form-control" name="message" placeholder="Nachricht" rows="4" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-dark">Senden</button>
+                </li>
+            </ul>
+        </section>
+        <section id="contact">
+            <h2>Kontaktieren Sie uns</h2>
+            <p>Haben Sie Fragen oder brauchen Sie Hilfe, dann schreiben Sie uns</p>
+            <form action="mailto:abdul.shaaban@elektro-damas.de" method="post" enctype="text/plain">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Ihre Name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Ihr Email" required>
+                
+                <label for="message">Nachricht:</label>
+                <textarea id="message" name="message" rows="5" placeholder="Nachricht" required></textarea>
+                
+                <button type="submit">Senden</button>
             </form>
+        </section>
+    </main>
+    <footer>
+        <div id="impressum">
+            <h2>Impressum</h2>
+            <p><strong>Company Name:</strong> ElektroDamas</p>
+            <p><strong>Owner:</strong> Abdulwahab Shaaban</p>
+            <!-- <p><strong>Phone:</strong> <a href="tel:+123456789">+123 456 789</a></p> -->
+            <p><strong>Email:</strong> <a href="mailto:info@elektrodamas.com">abdul.shaaban@elektro-damas.de</a></p>
+            <!-- <p><strong>VAT ID:</strong> DE123456789</p>
+            <p><strong>Chamber of Commerce:</strong> Registered at Power City Chamber of Commerce</p> -->
         </div>
-    </div>
-
-    <footer class="bg-dark text-white text-center py-3 mt-4">
-        &copy; 2025 Elektro Damas. All Rights Reserved.
+        <p>&copy; 2025 ElektroDamas. All rights reserved.</p>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
