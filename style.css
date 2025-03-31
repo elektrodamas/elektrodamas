@@ -149,6 +149,7 @@ main section {
 }
 
 #about p{
+    width:50%;
     text-align: justify;
 }
 
