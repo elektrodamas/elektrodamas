@@ -12,19 +12,20 @@
 </head>
 <body>
     <header>
+        <nav>
+            <ul>
+                <li><a href="#about"><i class="fa-solid fa-address-card"></i> Über uns</a></li>
+                <li><a href="#services"><i class="fa-solid fa-screwdriver-wrench"></i> Leistungen</a></li>
+                <li><a href="#contact"><i class="fa-solid fa-envelope"></i> Kontakt</a></li>
+            </ul>
+        </nav>
         <div class="hero">
             <h1>Wellkommen bei ElektroDamas</h1>
             <p>Ihr zuverlässiger Partner für alle Elektrolösungen</p>
             <a href="#services" class="btn"><i class="fa-solid fa-screwdriver-wrench"></i> Unsere Leistungen</a>
         </div>
     </header>
-    <nav>
-        <ul>
-            <li><a href="#about"><i class="fa-solid fa-address-card"></i> Über uns</a></li>
-            <li><a href="#services"><i class="fa-solid fa-screwdriver-wrench"></i> Leistungen</a></li>
-            <li><a href="#contact"><i class="fa-solid fa-envelope"></i> Kontakt</a></li>
-        </ul>
-    </nav>
+    
     <main>
         <section id="about">
             <h2>Über uns</h2>
@@ -95,6 +96,7 @@
                 <label for="message">Nachricht:</label>
                 <textarea id="message" name="message" rows="5" placeholder="Nachricht" required></textarea>
                 
+                <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div>
                 <button type="submit">Senden</button>
             </form>
         </section>
@@ -112,7 +114,7 @@
         </div>
         <p>&copy; 2025 ElektroDamas. All rights reserved.</p>
     </footer>
-
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script>
         document.querySelectorAll('nav a').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
