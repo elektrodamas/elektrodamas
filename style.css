@@ -149,8 +149,8 @@ main section {
 }
 
 #about p{
-    width:50%;
     text-align: justify;
+    width: 50%;
 }
 
 /* Services Section */
