@@ -84,8 +84,6 @@ header::before {
 }
 
 
-
-
 /* Navigation */
 nav {
     background: #333;
@@ -157,7 +155,7 @@ main section {
 #services {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
     padding: 20px;
     max-width: 100%;
 }
@@ -293,6 +291,11 @@ form button {
 form button:hover {
     background: #0056b3;
 }
+.g-recaptcha {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+}
 
 
 /* Footer */
@@ -346,4 +349,14 @@ footer #impressum a {
 
 footer #impressum a:hover {
     text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
 }
