@@ -115,10 +115,6 @@ nav ul li a:hover {
 }
 
 /* Main Content */
-main {
-    padding: 20px;
-}
-
 section {
     margin-bottom: 40px;
 }
@@ -141,11 +137,16 @@ ul {
 /* Center all sections in the main */
 main section {
     text-align: center;
-    max-width: 800px; 
     margin: 0 auto; 
     padding: 20px;
 }
 
+#about{
+    background-color: #f7f7f7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 #about p{
     text-align: justify;
@@ -161,7 +162,7 @@ main section {
 }
 #services ul {
     list-style: none;
-    padding: 0;
+    padding: 20px;
     margin: 0;
     display: flex;
     flex-wrap: wrap;
@@ -272,7 +273,6 @@ form label {
 }
 
 form input, form textarea {
-    width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
