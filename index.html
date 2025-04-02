@@ -11,6 +11,29 @@
     <link href="https://fonts.googleapis.com/css2?family=Amiko&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="style.css" rel="stylesheet">
+    <script>
+        window.onload = function() {
+            const recaptcha = document.querySelector('.g-recaptcha');
+            recaptcha.addEventListener('submit', function(event) {
+                event.preventDefault();
+                grecaptcha.execute();
+            });
+        };
+
+        function onLoadCallback() {
+            grecaptcha.render('recaptcha', {
+                'sitekey' : '6LeNkwcrAAAAAC78OS9bfAKs1ZC5VM5B_bKbqRH2'
+            });
+        }
+        function onSubmit(e) {
+            e.preventDefault();
+            grecaptcha.execute();
+        }
+        function onVerify(token) {
+            document.getElementById("contact-form").submit();
+        }
+    </script>
+    <script src="https://www.google.com/recaptcha/api.js?onLoad=onLoadCallback&render=explicit" async defer></script>
     <title>ElektroDamas - Your Trusted Electrician</title>
 </head>
 <body>
@@ -97,8 +120,8 @@
                     <label for="message">Nachricht:</label>
                     <textarea id="message" name="message" rows="5" placeholder="Nachricht" required></textarea>
                     
-                    <!-- <div ></div> -->
-                    <button class="g-recaptcha" data-sitekey="6LdAhAcrAAAAAHgKS6cJfV5u0yXtFQonQO6x3vE5" data-action='submit' data-callback='onSubmit' type="submit">Senden</button>
+                    <div class="g-recaptcha" data-sitekey="6LeNkwcrAAAAAC78OS9bfAKs1ZC5VM5B_bKbqRH2"></div>
+                    <button type="submit">Senden</button>
                 </form>
             </div>
         </article>
@@ -120,15 +143,10 @@
         </div>
         <p class="copy-right">&copy; 2025 Elektro Damas. All rights reserved.</p>
     </footer>
-    
-    <script src="https://www.google.com/recaptcha/enterprise.js?render=6LdAhAcrAAAAAHgKS6cJfV5u0yXtFQonQO6x3vE5" async defer></script>
+
     <script>
 
         document.addEventListener("DOMContentLoaded", () => {
-            function onSubmit(token){
-                document.getElementById("contact-form").submit();
-            }
-
             const elements = document.querySelectorAll(".has-animation");
 
             const observer = new IntersectionObserver((entries) => {
