@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="style.css" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="/imgs/favicon.jpg">
-    <script>
+    <!-- <script>
         window.onload = function() {
             const recaptcha = document.querySelector('.g-recaptcha');
             recaptcha.addEventListener('submit', function(event) {
@@ -33,7 +33,7 @@
         function onVerify(token) {
             document.getElementById("contact-form").submit();
         }
-    </script>
+    </script> -->
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <!-- <script src="https://www.google.com/recaptcha/api.js?onLoad=onLoadCallback&render=explicit" async defer></script> -->
     <title>ElektroDamas - Your Trusted Electrician</title>
@@ -112,7 +112,7 @@
             <h1 class="has-animation">Kontaktieren Sie uns</h1>
             <p class="has-animation">Haben Sie Fragen oder brauchen Sie Hilfe, dann schreiben Sie uns</p>
             <div class="contact-form">
-                <form id="contact-form" action="mailto:abdul.shaaban@elektro-damas.de" method="post" enctype="text/plain">
+                <form autocomplete="off" id="contact-form" action="mailto:abdul.shaaban@elektro-damas.de" method="post" enctype="text/plain">
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name" placeholder="Ihre Name" required>
                     
@@ -132,15 +132,23 @@
     <footer>
         <div id="impressum">
             <div class="left-col">
-                <h2>Elektro Damas</h2>
-                <p>Inhaber: Elektromeister Abdul Shaaban</p>
-                <p>Ust-Id: DE 366153685</p>
+                <p>
+                    <strong>Elektro Damas</strong>
+                    <br>
+                    Inhaber: Elektromeister Abdul Shaaban
+                    <br>
+                    Ust-Id: DE 366153685
+                </p>
             </div>
-            <div class="mid-col">
-                <p>Weyerstege 13</p>
-                <p>47533 Kleve</p>
-                <p><i class="fa-solid fa-phone"></i> 02821-8383073</p>
-                <p><a href="mailto:abdul.shaaban@elektro-damas.de"><i class="fa-solid fa-envelope"></i> abdul.shaaban@elektro-damas.de</a></p>
+            <div class="right-col">
+                <p>Weyerstege 13
+                    <br>
+                    47533 Kleve
+                    <br>
+                    <i class="fa-solid fa-phone"></i> 02821-8383073
+                    <br>
+                    <a href="mailto:abdul.shaaban@elektro-damas.de" target="_blank"><i class="fa-solid fa-envelope"></i> abdul.shaaban@elektro-damas.de</a>
+                </p>
             </div>
         </div>
         <p class="copy-right">&copy; 2025 Elektro Damas. All rights reserved.</p>
