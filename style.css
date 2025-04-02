@@ -133,7 +133,7 @@ footer {
 }
 
 footer p,
-footer h2 {
+footer strong {
     margin: 0;
     text-align: left;
 }
@@ -142,6 +142,7 @@ footer #impressum {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: flex-start;
     gap: 5px;
     padding: 10px;
     color: #fff;
@@ -149,11 +150,10 @@ footer #impressum {
     margin: 0 auto 10px;
     max-width: 1200px;
     text-align: left;
-    align-items: baseline;
+    align-items: stretch;
 }
 
 footer #impressum p {
-    margin: 0;
     font-size: 0.9rem;
     color: #999;
     font-weight: 300;
@@ -161,13 +161,10 @@ footer #impressum p {
     min-width: 200px;
 }
 
-footer #impressum h2 {
-    flex-basis: 100%;
+footer #impressum strong {
     font-size: 1.5rem;
     color: #fff;
     margin-bottom: 10px;
-    text-align: center;
-    text-align: left;
 }
 
 footer #impressum a {
