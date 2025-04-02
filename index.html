@@ -87,7 +87,7 @@
             <h1 class="has-animation">Kontaktieren Sie uns</h1>
             <p class="has-animation">Haben Sie Fragen oder brauchen Sie Hilfe, dann schreiben Sie uns</p>
             <div class="contact-form">
-                <form action="mailto:abdul.shaaban@elektro-damas.de" method="post" enctype="text/plain">
+                <form id="contact-form" action="mailto:abdul.shaaban@elektro-damas.de" method="post" enctype="text/plain">
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name" placeholder="Ihre Name" required>
                     
@@ -97,8 +97,8 @@
                     <label for="message">Nachricht:</label>
                     <textarea id="message" name="message" rows="5" placeholder="Nachricht" required></textarea>
                     
-                    <div class="g-recaptcha" data-sitekey="6LdAhAcrAAAAAHgKS6cJfV5u0yXtFQonQO6x3vE5"></div>
-                    <button type="submit">Senden</button>
+                    <!-- <div ></div> -->
+                    <button class="g-recaptcha" data-sitekey="6LdAhAcrAAAAAHgKS6cJfV5u0yXtFQonQO6x3vE5" data-action='submit' data-callback='onSubmit' type="submit">Senden</button>
                 </form>
             </div>
         </article>
@@ -125,6 +125,10 @@
     <script>
 
         document.addEventListener("DOMContentLoaded", () => {
+            function onSubmit(token){
+                document.getElementById("contact-form").submit();
+            }
+
             const elements = document.querySelectorAll(".has-animation");
 
             const observer = new IntersectionObserver((entries) => {
