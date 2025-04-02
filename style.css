@@ -4,12 +4,12 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6em;
-    color: #666;
+    color: #191919;
     background-color: #f9f9f9;
-    font-weight: 500;
     -webkit-font-smoothing: antialiased;
     -moz-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    margin-top: 110px;
 }
 
 html {
@@ -18,290 +18,194 @@ html {
 
 a {
     text-decoration: none;
-    color: #007BFF;
+    color:#191919
 }
 
 a:hover {
     color: #0056b3;
 }
 
-/* Hero Section with Parallax Effect */
-header {
-    position: relative;
-    background: url('img/elektrodamas.png') no-repeat center center;
-    background-size: cover;
-    background-attachment: fixed;
-    color: #fff;
-    text-align: center;
-    /* padding: 100px 20px; */
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+p {
+    text-align: justify;
 }
 
-header::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 1;
-}
-
-.hero {
-    position: relative;
-    z-index: 2;
-}
-
-.hero h1 {
-    font-size: 3rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-}
-
-.hero p {
-    font-size: 1.5rem;
-    margin-bottom: 30px;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
-}
-
-.hero .btn {
-    display: inline-block;
-    padding: 15px 30px;
-    background: #007BFF;
-    color: #fff;
-    border-radius: 50px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    transition: background 0.9s ease, transform 0.9s ease;
-}
-
-.hero .btn:hover {
-    background: #0056b3;
-    transform: translateY(-3px);
-}
-
-/* Fallback for Mobile Devices */
-@media (max-width: 768px) {
-    header {
-        background-attachment: scroll;
-        padding: 80px 15px;
-        background-size: cover;
-        height: auto;
-    }
-
-    .hero h1 {
-        font-size: 2rem;
-    }
-
-    .hero p {
-        font-size: 1.2rem;
-    }
-}
-
-/* Navigation */
-nav {
+nav{
+    background-color: #f8f9fa;
+    padding: 40px;
+    box-shadow: #ccc 0px 0px 20px; 
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background: #333;
-    color: #fff;
-    padding: 10px 0;
     z-index: 1000;
-    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); */
-    background: transparent;
-    transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
-nav.scrolled {
-    background: #333; /* Background color after scrolling */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Adds a shadow for better visibility */
-}
-
-nav ul {
+.nav-list {
     list-style: none;
-    display: flex;
-    justify-content: center;
-    margin: 0;
     padding: 0;
+    margin: 0;
+    gap: 0 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
-nav ul li {
-    margin: 0 15px;
+.hero-text{
+    padding: 50px;
 }
 
-nav ul li a {
-    color: #fff;
-    font-weight: bold;
-    text-decoration: none;
-    transition: color 0.3s ease;
+
+main  {
+    margin: 0 auto;
 }
 
-nav ul li a:hover {
-    color: #007BFF;
+.article {
+    scroll-margin-top: 80px;
 }
 
-/* Main Content */
-section {
-    /* margin-bottom: 40px; */
-    height: 100vh;
-    display: flex; /* Flexbox for centering content */
+.services h1,
+.services p {
+    padding: 0 50px 0 50px;
+}
+
+.services {
+    padding: 50px 0 50px 0;
+}
+
+.grid {
+    display: flex;
     flex-direction: column;
-    justify-content: center; /* Vertically center the content */
-    align-items: center; /* Horizontally center the content */
-    /* padding: 20px; */
-    /* box-sizing: border-box; */
+    width: 100%;
 }
-
-section h2 {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-    color: #007BFF;
-}
-
-section p, section ul {
-    font-size: 1rem;
-}
-
-ul {
-    list-style: disc;
-    margin-left: 20px;
-}
-
-/* Center all sections in the main */
-main section {
+.grid h3{
     text-align: center;
-    margin: 0 auto; 
-    padding: 20px;
 }
 
-#about{
+.grid-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    width: 100%;
+}
+.grid-col1,
+.grid-col2 {
+    flex: 1;
+    padding: 10px;
+    box-sizing: border-box;
+} 
+
+.col-text{
     background-color: #f2f2f2;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    padding: 0;
+    overflow: hidden;
     align-items: center;
 }
 
-#about p{
-    text-align: justify;
-    width: 70%;
+.col-img{
+    padding: 0;
+    overflow: hidden;
+}
+.col-img img{
+    width: 100%;
+    height: 100%;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+    transition: transform 0.3s ease-out;
+}
+.col-img img:hover {
+    transform: scale(1.1, 1.1);
 }
 
-/* Services Section */
-#services {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    max-width: 100%;
+
+
+/* Footer */
+footer {
+    background: #000;
+    color: #ccc;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
 }
-#services ul {
-    list-style: none;
-    padding: 20px;
+
+footer p,
+footer h2 {
     margin: 0;
+    text-align: left;
+}
+
+footer #impressum {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    width: 100%;
-    perspective: 1000px;
-}
-
-#services li {
-    perspective: 1000px;
-    width: 250px;
-    height: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
-
-#services li .card {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transform-style: preserve-3d;
-    transition: transform 0.6s ease;
-}
-
-#services li:hover .card {
-    transform: rotateY(180deg);
-}
-
-#services li .card .front,
-#services li .card .back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-#services li .card .front {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-#services li .card .back {
-    background: #fff;
-    transform: rotateY(180deg);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-#services li .card .back h3 {
-    font-size: 1.5rem;
-    color: #007BFF;
-    margin-bottom: 10px;
-}
-
-#services li .card .back p {
-    font-size: 1rem;
-    color: #555;
-    line-height: 1.6;
-}
-
-#services li .card .front .title {
-    position: absolute;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(0, 0, 0, 0.6);
+    justify-content: space-between;
+    gap: 5px;
+    padding: 10px;
     color: #fff;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 1.1rem;
-    font-weight: bold;
+    border: none;
+    margin: 0 auto 10px;
+    max-width: 1200px;
+    text-align: left;
+    align-items: baseline;
+}
+
+footer #impressum p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #999;
+    font-weight: 300;
+    flex: 1 1 calc(33.33% - 20px);
+    min-width: 200px;
+}
+
+footer #impressum h2 {
+    flex-basis: 100%;
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 10px;
     text-align: center;
-    z-index: 2;
+    text-align: left;
 }
 
-#services li:hover .card .front {
-    transform: scale(1.05);
+footer #impressum a {
+    color: #007BFF;
+    text-decoration: none;
 }
 
+footer #impressum a:hover {
+    text-decoration: underline;
+}
+.copy-right{
+    text-align: center;
+}
 
 /* Contact Form Styles */
+
+.contact h1,
+.contact p {
+    padding: 0 50px 0 50px;
+}
+
+.contact {
+    padding: 50px 0 50px 0;
+}
+
+.contact-form{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
 form {
     display: flex;
     flex-direction: column;
     gap: 10px;
     max-width: 500px;
     width: 50%;
-    /* margin: 20px auto; */
     padding: 30px;
     background: #fff;
     border: 1px solid #ddd;
@@ -310,7 +214,6 @@ form {
 }
 
 form label {
-    font-weight: bold;
     text-align: left;
 }
 
@@ -318,7 +221,6 @@ form input, form textarea {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 1rem;
 }
 
 form button {
@@ -327,7 +229,6 @@ form button {
     color: #fff;
     border: none;
     border-radius: 5px;
-    font-size: 1rem;
     cursor: pointer;
 }
 
@@ -341,88 +242,111 @@ form button:hover {
 }
 
 
-/* Footer */
-footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    margin-top: 20px;
+
+/* Initial hidden state for h and p tags */
+.has-animation {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
-footer p {
-    margin: 0;
+/* Animation when elements are visible */
+h1.visible, h2.visible, h3.visible, h4.visible, h5.visible, h6.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-footer #impressum {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    gap: 5px;
-    padding: 10px;
-    background: #333;
-    color: #fff;
-    border: none;
-    margin: 0 auto 10px;
-    max-width: 1200px;
-    text-align: left;
+p.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-footer #impressum p {
-    margin: 0;
-    font-size: 0.9rem;
-    color: #ddd;
-    flex: 1 1 calc(33.33% - 20px);
-    min-width: 200px;
-}
 
-footer #impressum h2 {
-    flex-basis: 100%;
-    font-size: 1.5rem;
-    color: #fff;
-    margin-bottom: 10px;
-    text-align: center;
-}
 
-footer #impressum a {
-    color: #007BFF;
-    text-decoration: none;
-}
-
-footer #impressum a:hover {
-    text-decoration: underline;
-}
-
+/* Responsive Styles */
 @media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2rem;
+    nav {
+        padding: 20px;
     }
 
-    .hero p {
-        font-size: 1.2rem;
+    .nav-list {
+        display: none; /* Initially hide the menu */
+        flex-direction: column;
+        gap: 10px;
+        background-color: #f8f9fa;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
     }
-}
-/* Back to Top Button */
-#back-to-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    display: none; /* Hidden by default */
-    background-color: #007BFF;
-    color: #fff;
-    border: none;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    font-size: 1.5rem;
-    cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    z-index: 1000;
-}
 
-#back-to-top:hover {
-    background-color: #0056b3;
-    transform: scale(1.1); /* Slightly enlarge on hover */
+    .nav-list.active {
+        display: flex; /* Show the menu when active */
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        position: relative;
+        z-index: 1100;
+    }
+
+    .hamburger div {
+        width: 100%;
+        height: 4px;
+        background-color: #191919;
+        margin: 5px 0;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .hamburger.active div:nth-child(1) {
+        transform: rotate(45deg) translate(7px, 7px);
+    }
+
+    .hamburger.active div:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active div:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    .services h1,
+    .services p,
+    .contact h1,
+    .contact p {
+        padding: 0 20px;
+    }
+
+    .grid-row {
+        flex-direction: column;
+    }
+
+    .grid-row .col-img {
+        order: -1;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: stretch; 
+    }
+
+    .grid-row .col-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    footer #impressum {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    form {
+        width: 90%;
+        padding: 20px;
+    }
 }
