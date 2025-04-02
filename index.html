@@ -10,143 +10,145 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Amiko&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="style.css" rel="stylesheet">
+    <link href="style2.css" rel="stylesheet">
     <title>ElektroDamas - Your Trusted Electrician</title>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#about"><i class="fa-solid fa-address-card"></i> Über uns</a></li>
-                <li><a href="#services"><i class="fa-solid fa-screwdriver-wrench"></i> Leistungen</a></li>
-                <li><a href="#contact"><i class="fa-solid fa-envelope"></i> Kontakt</a></li>
-            </ul>
-        </nav>
-        <div class="hero">
-            <h1>Wellkommen bei ElektroDamas</h1>
-            <p>Ihr zuverlässiger Partner für alle Elektrolösungen</p>
-            <a href="#services" class="btn"><i class="fa-solid fa-screwdriver-wrench"></i> Unsere Leistungen</a>
+    <nav class="navbar">
+        <div class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
         </div>
-    </header>
-    
+        <ul class="nav-list">
+            <li><a href="#company"><i class="fa-solid fa-address-card"></i> Unternehmen</a></li>
+            <li><a href="#services"><i class="fa-solid fa-screwdriver-wrench"></i> Service</a></li>
+            <li><a href="#contact"><i class="fa-solid fa-envelope"></i> Kontakt</a></li>
+        </ul>
+    </nav>
     <main>
-        <section id="about">
-            <h2>Über uns</h2>
-            <p>Planung, Service, Termintreue und Zuverlässigkeit werden bei uns in allen Bereichen großgeschrieben! Ganz gleich, ob Kundendienst, Neu- oder Umbau - wir von Elektro Damas sind an Ihrer Seite. Mit professionellem Service rund um Elektroinstallationen und zahlreichen weiteren Leistungen überzeugen wir unsere Kund:innen in der Region und Umgebung. Sowohl für Privatkund:innen als auch für Gewerbe- und Industriekund: innen sind wir der Elektro-Partner des Vertrauens.</p>
-        </section>
-        <section id="services">
-            <h2>Unsere Leistungen</h2>
-            <ul>
-                <li>
-                    <div class="card">
-                        <div class="front" style="background-image: url('img/pic1.png');">
-                            <div class="title">Sprechanlagen</div>
-                        </div>
-                        <div class="back">
-                            <i class="fa-solid fa-phone-volume fa-2xl"></i>
-                            <h3>Sprechanlagen</h3>
-                            <p>Moderne Türkommunikations-Systeme mit Videofunktion und mehr.</p>
-                        </div>
+        <article id="company" class="article hero-text">
+            <h1 class="has-animation">Wellkommen bei Elektro Damas</h1>
+            <p class="has-animation">Ihr zuverlässiger Partner für viele Elektrolösungen</p>
+            <p class="has-animation">Unsere Geschichte begann mit einer Leidenschaft für Elektrotechnik und Innovation. Aus einem kleinen Team haben wir uns zu einem Dienstleister entwickelt, der sich auf die Umsetzung von Elektroinstallationen und die Zufriedenheit unserer Kunden konzentriert.</p>
+        </article>
+
+        <article class="hero-image">
+            <img src="imgs/hero.jpg" alt="hero" class="hero-image" width="100%" height="400px">
+        </article>
+
+        <article id="services" class="article services">
+            <h1 class="has-animation">Unsere Service</h1>
+            <p class="has-animation">Planung, Service, Termintreue und Zuverlässigkeit werden bei uns in allen Bereichen großgeschrieben! Ganz gleich, ob Kundendienst, Neu- oder Umbau - wir von Elektro Damas sind an Ihrer Seite. Mit professionellem Service rund um Elektroinstallationen und zahlreichen weiteren Leistungen überzeugen wir unsere Kund:innen in der Region und Umgebung. Sowohl für Privatkund:innen als auch für Gewerbe- und Industriekund: innen sind wir der Elektro-Partner des Vertrauens.</p>
+            <section class="grid">
+                <div class="grid-row">
+                    <div class="grid-col1 col-img">
+                        <img src="imgs/solar.jpg"/>
                     </div>
-                </li>
-                <li>
-                    <div class="card">
-                        <div class="front" style="background-image: url('img/pic3.jpg');">
-                            <div class="title">E-Mobilität</div>
-                        </div>
-                        <div class="back">
-                            <i class="fa-solid fa-charging-station fa-2xl"></i>
-                            <h3>E-Mobilität</h3>
-                            <p>Nachhaltige Lösungen für klimaschonendes Fahren.</p>
-                        </div>
+                    <div class="grid-col2 col-text">
+                        <h3 class="has-animation"><i class="fa-solid fa-solar-panel fa-2xl"></i> Photovoltaikanlagen</h3>
+                        <p class="has-animation">Effeiziente Anlagen für die Energiewende und Kostensenkung.</p>
                     </div>
-                </li>
-                <li>
-                    <div class="card">
-                        <div class="front" style="background-image: url('img/pic1.png');">
-                            <div class="title">Photovoltaik</div>
-                        </div>
-                        <div class="back">
-                            <i class="fa-solid fa-solar-panel fa-2xl"></i><h3>Photovoltaik</h3>
-                            <p>Effiziente Anlagen für die Energiewende und Kostensenkung.</p>
-                        </div>
+                </div>
+                <div class="grid-row">
+                    <div class="grid-col1 col-text">
+                        <h3 class="has-animation"><i class="fa-solid fa-lightbulb fa-2xl"></i>  Elektroinstallation</h3>
+                        <p class="has-animation">
+                            Neuerrichtungen, Umbauten und Erweiterungen von Elektroinstallationen für Ihr Zuhause oder Betrieb.
+                        </p>
                     </div>
-                </li>
-                <li>
-                    <div class="card">
-                        <div class="front" style="background-image: url('img/pic2.png');">
-                            <div class="title">Elektroinstallation</div>
-                        </div>
-                        <div class="back">
-                            <i class="fa-solid fa-screwdriver-wrench fa-2xl"></i>
-                            <h3>Elektroinstallation</h3>
-                            <p>Professionelle Installationen für Neubau und Modernisierung.</p>
-                        </div>
+                    <div class="grid-col2 col-img">
+                        <img src="imgs/lamp.jpg"/>
                     </div>
-                </li>
-            </ul>
-        </section>
-        <section id="contact">
-            <h2>Kontaktieren Sie uns</h2>
-            <p>Haben Sie Fragen oder brauchen Sie Hilfe, dann schreiben Sie uns</p>
-            <form action="mailto:abdul.shaaban@elektro-damas.de" method="post" enctype="text/plain">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" placeholder="Ihre Name" required>
-                
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="Ihr Email" required>
-                
-                <label for="message">Nachricht:</label>
-                <textarea id="message" name="message" rows="5" placeholder="Nachricht" required></textarea>
-                
-                <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div>
-                <button type="submit">Senden</button>
-            </form>
-        </section>
+                </div>
+                <div class="grid-row">
+                    <div class="grid-col1 col-img">
+                        <img src="imgs/circuit.jpg"/>
+                    </div>
+                    <div class="grid-col2 col-text">
+                        <h3 class="has-animation"><i class="fa-solid fa-screwdriver-wrench fa-2xl"></i> Energietechnik für Ihren Betrieb</h3>
+                        <p class="has-animation"></p>
+                    </div>
+                </div>
+                <div class="grid-row">
+                    <div class="grid-col1 col-text">
+                        <h3 class="has-animation"><i class="fa-solid fa-charging-station fa-2xl"></i> E-Mobilität</h3>
+                        <p class="has-animation">
+                            Nachhaltige Lösungen für klimaschonendes Fahren. Mit Überschuss heimerzeugten Strom Ihr E-Auto laden
+                        </p>
+                    </div>
+                    <div class="grid-col2 col-img">
+                        <img src="imgs/car.jpg"/>
+                    </div>
+                </div>
+            </section>
+        </article>
+        <article class="article contact" id="contact">
+            <h1 class="has-animation">Kontaktieren Sie uns</h1>
+            <p class="has-animation">Haben Sie Fragen oder brauchen Sie Hilfe, dann schreiben Sie uns</p>
+            <div class="contact-form">
+                <form action="mailto:abdul.shaaban@elektro-damas.de" method="post" enctype="text/plain">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Ihre Name" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Ihr Email" required>
+                    
+                    <label for="message">Nachricht:</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Nachricht" required></textarea>
+                    
+                    <!-- <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div> -->
+                    <button type="submit">Senden</button>
+                </form>
+            </div>
+        </article>
+
     </main>
     <footer>
         <div id="impressum">
-            <h2>Impressum</h2>
-            <p><strong>Company Name:</strong> ElektroDamas</p>
-            <p><strong>Owner:</strong> Abdulwahab Shaaban</p>
-            <!-- <p><strong>Address:</strong> 123 Electric Ave, Power City</p> -->
-            <!-- <p><strong>Phone:</strong> <a href="tel:+123456789">+123 456 789</a></p> -->
-            <p><strong>Email:</strong> <a href="mailto:abdul.shaaban@elektro-damas.de">abdul.shaaban@elektro-damas.de</a></p>
-            <!-- <p><strong>VAT ID:</strong> DE123456789</p>
-            <p><strong>Chamber of Commerce:</strong> Registered at Power City Chamber of Commerce</p> -->
+            <div class="left-col">
+                <h2>Elektro Damas</h2>
+                <p>Inhaber: Elektromeister Abdul Shaaban</p>
+                <p>Ust-Id: DE 366153685</p>
+            </div>
+            <div class="mid-col">
+                <p>Weyerstege 13</p>
+                <p>47533 Kleve</p>
+                <p><i class="fa-solid fa-phone"></i> 02821-8383073</p>
+                <p><a href="mailto:abdul.shaaban@elektro-damas.de"><i class="fa-solid fa-envelope"></i> abdul.shaaban@elektro-damas.de</a></p>
+            </div>
         </div>
-        <p>&copy; 2025 ElektroDamas. All rights reserved.</p>
+        <p class="copy-right">&copy; 2025 Elektro Damas. All rights reserved.</p>
     </footer>
-    <!-- Back to Top Button -->
-<button id="back-to-top" title="Back to Top"><i class="fa-solid fa-arrow-up"></i></button>
+    
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script>
-        const backToTopButton = document.getElementById('back-to-top');
-        // JavaScript to change the navigation background on scroll
-        window.addEventListener('scroll', function () {
-            const nav = document.querySelector('nav');
-            if (window.scrollY > 50) {
-                nav.classList.add('scrolled');
-                backToTopButton.style.display = 'block';
-            } else {
-                nav.classList.remove('scrolled');
-                backToTopButton.style.display = 'none';
-            }
-        });
-        backToTopButton.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const elements = document.querySelectorAll(".has-animation");
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                    }
+                });
+            }, { threshold: 0.3 });
+
+            elements.forEach(element => observer.observe(element));
+
+            const hamburger = document.querySelector('.hamburger');
+            const navList = document.querySelector('.nav-list');
+            const navLinks = document.querySelectorAll('.nav-list a');
+            
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                navList.classList.toggle('active');
             });
-        });
-        document.querySelectorAll('nav a').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href').substring(1);
-                const targetElement = document.getElementById(targetId);
-                targetElement.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    hamburger.classList.remove('active');
+                    navList.classList.remove('active');
                 });
             });
         });
