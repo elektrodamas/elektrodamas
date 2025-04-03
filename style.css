@@ -1,11 +1,53 @@
+/* Define light mode (default) */
+:root {
+    --background-color: #f9f9f9;
+    --nav-background-color: #f8f9fa;
+    --text-color: #191919;
+    --link-color: #0056b3;
+    --footer-background: #000;
+    --footer-text-color: #ccc;
+    --button-background: #007BFF;
+    --button-hover-background: #0056b3;
+    --article-background: #f2f2f2;
+    --form-background-color: #fff;
+}
+
+/* Define dark mode */
+.dark-mode {
+    --background-color: #191919;
+    --nav-background-color: #000;
+    --text-color: #f9f9f9;
+    --link-color: #4da8da;
+    --footer-background: #333;
+    --footer-text-color: #999;
+    --button-background: #4da8da;
+    --button-hover-background: #007BFF;
+    --article-background: #000;
+    --form-background-color: transparent;
+}
+#dark-mode-toggle {
+    background: transparent;
+    color: var(--text-color);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-left: auto;
+}
+#dark-mode-toggle:hover {
+    background: transparent;
+}
+
+
 /* General Styles */
 body {
     font-family: 'Amiko', Arial, sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6em;
-    color: #191919;
-    background-color: #f9f9f9;
+    /* color: #191919;
+    background-color: #f9f9f9; */
+    background-color: var(--background-color);
+    color: var(--text-color);
     -webkit-font-smoothing: antialiased;
     -moz-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -18,7 +60,8 @@ html {
 
 a {
     text-decoration: none;
-    color:#191919
+    /* color:#191919 */
+    color: var(--text-color);
 }
 
 a:hover {
@@ -30,14 +73,17 @@ p {
 }
 
 nav{
-    background-color: #f8f9fa;
+    /* background-color: #f8f9fa; */
+    background-color: var(--nav-background-color);
     padding: 40px;
-    box-shadow: #ccc 0px 0px 20px; 
+    box-shadow: #ccc 0px 0px 5px; 
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
+    display: flex;
+    box-sizing: border-box;
 }
 
 .nav-list {
@@ -97,7 +143,8 @@ main  {
 } 
 
 .col-text{
-    background-color: #f2f2f2;
+    /* background-color: #f2f2f2; */
+    background-color: var(--article-background);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -204,7 +251,8 @@ form {
     max-width: 500px;
     width: 50%;
     padding: 30px;
-    background: #fff;
+    background: var(--form-background-color);
+    /* background: #fff; */
     border: 1px solid #ddd;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -218,6 +266,7 @@ form input, form textarea {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    background: var(--form-background-color);
 }
 
 form button {
