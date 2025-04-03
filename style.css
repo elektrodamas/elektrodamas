@@ -44,8 +44,6 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6em;
-    /* color: #191919;
-    background-color: #f9f9f9; */
     background-color: var(--background-color);
     color: var(--text-color);
     -webkit-font-smoothing: antialiased;
@@ -60,7 +58,6 @@ html {
 
 a {
     text-decoration: none;
-    /* color:#191919 */
     color: var(--text-color);
 }
 
@@ -73,7 +70,6 @@ p {
 }
 
 nav{
-    /* background-color: #f8f9fa; */
     background-color: var(--nav-background-color);
     padding: 40px;
     box-shadow: #ccc 0px 0px 5px; 
@@ -143,7 +139,6 @@ main  {
 } 
 
 .col-text{
-    /* background-color: #f2f2f2; */
     background-color: var(--article-background);
     display: flex;
     flex-direction: column;
@@ -252,7 +247,6 @@ form {
     width: 50%;
     padding: 30px;
     background: var(--form-background-color);
-    /* background: #fff; */
     border: 1px solid #ddd;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -309,15 +303,33 @@ p.visible {
 }
 
 
+.company-name{
+    display: none;
+}
 
 /* Responsive Styles */
 @media (max-width: 768px) {
+    .company-name{
+        display: block;
+        font-weight: 700;
+    }
+    
     nav {
         padding: 20px;
+        background-color: var(--nav-background-color);
+        box-shadow: #ccc 0px 0px 5px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        display: flex;
+        box-sizing: border-box;
+        align-items: center;
+        gap: 10px;
     }
-
     .nav-list {
-        display: none; /* Initially hide the menu */
+        display: none;
         flex-direction: column;
         gap: 10px;
         background-color: var(--nav-background-color);
@@ -330,14 +342,13 @@ p.visible {
     }
 
     .nav-list.active {
-        display: flex; /* Show the menu when active */
+        display: flex;
     }
 
     .hamburger {
         display: block;
         cursor: pointer;
         width: 30px;
-        height: 30px;
         position: relative;
         z-index: 1100;
     }
@@ -349,7 +360,12 @@ p.visible {
         margin: 5px 0;
         transition: all 0.3s ease-in-out;
     }
-
+    .hamburger div:first-child {
+        margin-top: 0;
+    }
+    .hamburger div:last-child {
+        margin-bottom: 0;
+    }
     .hamburger.active div:nth-child(1) {
         transform: rotate(45deg) translate(7px, 7px);
     }
