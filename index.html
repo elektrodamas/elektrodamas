@@ -97,42 +97,26 @@
                 </div>
             </section>
         </article>
-        <!--<article class="article contact" id="contact">
+        <article class="article contact" id="contact">
             <h1 class="has-animation">Kontaktieren Sie uns</h1>
             <p class="has-animation">Haben Sie Fragen oder brauchen Sie Hilfe, dann schreiben Sie uns</p>
             <div class="contact-form">
-                <form autocomplete="off" id="contact-form" action="mailto:abdul.shaaban@elektro-damas.de" method="post" enctype="text/plain">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" placeholder="Ihre Name" required>
-                    
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" placeholder="Ihr Email" required>
-                    
-                    <label for="message">Nachricht:</label>
-                    <textarea id="message" name="message" rows="5" placeholder="Nachricht" required></textarea>
-                    
-                    <div id="recaptcha" class="g-recaptcha" data-sitekey="6LeNkwcrAAAAAC78OS9bfAKs1ZC5VM5B_bKbqRH2"></div>
-                    <button type="submit">Senden</button>
+                <form action="https://api.staticforms.xyz/submit" method="POST">
+                  <input type="hidden" name="apiKey" value="sf_804il35nheif88i49jf0nf3g" />
+                
+                  <input type="text" name="name" placeholder="Name" required />
+                  <input type="email" name="email" placeholder="Email" required />
+                  <textarea name="message" placeholder="Message" required></textarea>
+                  
+                 
+                  <div class="g-recaptcha" data-sitekey="6Lcu32ArAAAAAFcWzpPRIAwF3mQh7lktP02ssFrQ"></div>
+                  
+                  <button type="submit">Send</button>
+                  
+                  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
                 </form>
             </div>
-        </article>-->
-
-        <form action="https://api.staticforms.xyz/submit" method="POST">
-          <input type="hidden" name="apiKey" value="sf_804il35nheif88i49jf0nf3g" />
-          
-          <!-- Your form fields -->
-          <input type="text" name="name" placeholder="Name" required />
-          <input type="email" name="email" placeholder="Email" required />
-          <textarea name="message" placeholder="Message" required></textarea>
-          
-         
-          <div class="g-recaptcha" data-sitekey="6Lcu32ArAAAAAFcWzpPRIAwF3mQh7lktP02ssFrQ"></div>
-          
-          <button type="submit">Send</button>
-          
-          <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-        </form>
-
+        </article>
     </main>
     <footer>
         <div id="impressum">
