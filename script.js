@@ -74,65 +74,65 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Photo Gallery Modal
-let slideIndex = 1;
-let currentImages = [];
+// let slideIndex = 1;
+// let currentImages = [];
 
-document.addEventListener('DOMContentLoaded', () => {
-    const modal = document.getElementById('imageModal');
-    const modalImg = document.getElementById("modalImage");
-    const captionText = document.getElementById("caption");
-    const closeBtn = document.getElementsByClassName("close")[0];
+// document.addEventListener('DOMContentLoaded', () => {
+//     const modal = document.getElementById('imageModal');
+//     const modalImg = document.getElementById("modalImage");
+//     const captionText = document.getElementById("caption");
+//     const closeBtn = document.getElementsByClassName("close")[0];
 
-    if (modal) {
-        const projectImages = document.querySelectorAll('.project-card img');
+//     if (modal) {
+//         const projectImages = document.querySelectorAll('.project-card img');
 
-        projectImages.forEach(img => {
-            img.style.cursor = 'pointer';
-            img.addEventListener('click', function () {
-                modal.style.display = "block";
+//         projectImages.forEach(img => {
+//             img.style.cursor = 'pointer';
+//             img.addEventListener('click', function () {
+//                 modal.style.display = "block";
 
-                // Get images from data attribute or fallback to src
-                const imagesAttr = this.getAttribute('data-images');
-                if (imagesAttr) {
-                    currentImages = imagesAttr.split(',');
-                } else {
-                    currentImages = [this.src];
-                }
+//                 // Get images from data attribute or fallback to src
+//                 const imagesAttr = this.getAttribute('data-images');
+//                 if (imagesAttr) {
+//                     currentImages = imagesAttr.split(',');
+//                 } else {
+//                     currentImages = [this.src];
+//                 }
 
-                slideIndex = 1;
-                showSlides(slideIndex, this.alt);
-            });
-        });
+//                 slideIndex = 1;
+//                 showSlides(slideIndex, this.alt);
+//             });
+//         });
 
-        if (closeBtn) {
-            closeBtn.onclick = function () {
-                modal.style.display = "none";
-            }
-        }
+//         if (closeBtn) {
+//             closeBtn.onclick = function () {
+//                 modal.style.display = "none";
+//             }
+//         }
 
-        modal.addEventListener('click', function (e) {
-            if (e.target === modal) {
-                modal.style.display = "none";
-            }
-        });
-    }
-});
+//         modal.addEventListener('click', function (e) {
+//             if (e.target === modal) {
+//                 modal.style.display = "none";
+//             }
+//         });
+//     }
+// });
 
-function plusSlides(n) {
-    showSlides(slideIndex += n);
-}
+// function plusSlides(n) {
+//     showSlides(slideIndex += n);
+// }
 
-function showSlides(n, altText) {
-    const modalImg = document.getElementById("modalImage");
-    const captionText = document.getElementById("caption");
+// function showSlides(n, altText) {
+//     const modalImg = document.getElementById("modalImage");
+//     const captionText = document.getElementById("caption");
 
-    if (n > currentImages.length) { slideIndex = 1 }
-    if (n < 1) { slideIndex = currentImages.length }
+//     if (n > currentImages.length) { slideIndex = 1 }
+//     if (n < 1) { slideIndex = currentImages.length }
 
-    modalImg.src = currentImages[slideIndex - 1];
-    if (altText) {
-        captionText.innerHTML = `${altText} (${slideIndex}/${currentImages.length})`;
-    } else {
-        captionText.innerHTML = `Bild ${slideIndex} von ${currentImages.length}`;
-    }
-}
+//     modalImg.src = currentImages[slideIndex - 1];
+//     if (altText) {
+//         captionText.innerHTML = `${altText} (${slideIndex}/${currentImages.length})`;
+//     } else {
+//         captionText.innerHTML = `Bild ${slideIndex} von ${currentImages.length}`;
+//     }
+// }
