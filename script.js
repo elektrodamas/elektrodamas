@@ -14,12 +14,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const hamburger = document.querySelector('.hamburger');
     const navList = document.querySelector('.nav-list');
     const navLinks = document.querySelectorAll('.nav-list a');
-    
+
     if (hamburger && navList) {
         hamburger.addEventListener('click', () => {
             hamburger.classList.toggle('active');
             navList.classList.toggle('active');
-            
+
             // Accessibility: Update aria-expanded
             const expanded = hamburger.getAttribute('aria-expanded') === 'true' || false;
             hamburger.setAttribute('aria-expanded', !expanded);
@@ -62,5 +62,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 localStorage.setItem('dark-mode', 'enabled');
             }
         });
+    }
+});
+
+// Dynamic Copyright Year
+document.addEventListener('DOMContentLoaded', () => {
+    const yearElement = document.getElementById('copyright-year');
+    if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
     }
 });
