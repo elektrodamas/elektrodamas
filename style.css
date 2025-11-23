@@ -120,64 +120,82 @@ main {
 
 .services h2,
 .services p {
-    padding: 0 50px 0 50px;
+    padding: 0 10px 0 10px;
 }
 
 .services {
     padding: 50px 0 50px 0;
 }
 
-.grid {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    padding: 0 20px;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
-.grid h3 {
-    text-align: center;
-}
-
-.grid-row {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    flex-wrap: nowrap;
-    align-items: stretch;
-    width: 100%;
-}
-
-.grid-col1,
-.grid-col2 {
-    flex: 1;
-    padding: 10px;
-    box-sizing: border-box;
-}
-
-.col-text {
-    background-color: var(--article-background);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0;
+.service-card {
+    background: var(--article-background);
+    border-radius: 12px;
     overflow: hidden;
-    align-items: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
 }
 
-.col-img {
-    padding: 0;
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.card-image {
+    height: 200px;
+    width: 100%;
     overflow: hidden;
 }
 
-.col-img img {
+.card-image img {
     width: 100%;
     height: 100%;
-    overflow-clip-margin: content-box;
-    overflow: clip;
-    transition: transform 0.3s ease-out;
+    object-fit: cover;
+    transition: transform 0.5s ease;
 }
 
-.col-img img:hover {
-    transform: scale(1.1, 1.1);
+.service-card:hover .card-image img {
+    transform: scale(1.05);
+}
+
+.card-content {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-content h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: var(--heading-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.card-content h3 i {
+    color: var(--button-background);
+    font-size: 1.2rem;
+}
+
+.card-content p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    margin: 0;
+    text-align: left;
 }
 
 /* Footer */
@@ -438,22 +456,9 @@ form button:hover {
         padding: 0 20px;
     }
 
-    .grid-row {
-        flex-direction: column;
-    }
-
-    .grid-row .col-img {
-        order: -1;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        align-items: stretch;
-    }
-
-    .grid-row .col-img img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+    .services-grid {
+        padding: 0 20px;
+        grid-template-columns: 1fr;
     }
 
     footer #impressum {
