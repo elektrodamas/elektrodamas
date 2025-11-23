@@ -260,10 +260,6 @@ footer #impressum a:hover {
     padding: 0 50px 0 50px;
 }
 
-.contact {
-    padding: 50px 0 50px 0;
-}
-
 .contact-form {
     display: flex;
     flex-direction: row;
