@@ -110,6 +110,10 @@ nav {
     padding: 50px;
 }
 
+.hero-text>h1 {
+    margin: 0;
+}
+
 main {
     margin: 0 auto;
 }
@@ -124,7 +128,7 @@ main {
 }
 
 .services {
-    padding: 50px 0 50px 0;
+    padding: 50px;
 }
 
 .services-grid {
@@ -258,6 +262,7 @@ footer #impressum a:hover {
 .contact h2,
 .contact p {
     padding: 0 50px 0 50px;
+    text-align: center;
 }
 
 .contact-form {
