@@ -1,0 +1,16 @@
+# Allow all robots
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://elektro-damas.de/sitemap.xml
+
+# Disallow specific directories if needed
+# Disallow: /admin/
+# Disallow: /private/
+
+# Crawl delay (optional - time in seconds between requests)
+# Crawl-delay: 1
+
+# Request rate (optional)
+# Request-rate: 1/1s

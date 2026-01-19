@@ -1,25 +1,170 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Nachricht erfolgreich gesendet - Elektro Damas">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="language" content="de-DE">
+    <meta name="robots" content="noindex, nofollow">
     <link rel="icon" type="image/svg+xml" href="imgs/plug-circle-bolt-solid.svg">
-    <title>Erfolgreich!</title>
-    <script>
-        setTimeout(function() {
-            window.location.href = "index.html"; // Change this to your actual home page URL
-        }, 5000); // 5000 milliseconds = 5 seconds
-    </script>
+    <link href="style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiko&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="script.js" defer></script>
+    <title>Elektro Damas - Nachricht erfolgreich gesendet</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            margin-top: 0;
+        }
+        .success-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: calc(100vh - 110px);
+            padding: 50px 20px;
             text-align: center;
-            margin-top: 50px;
+        }
+        .success-icon {
+            font-size: 4rem;
+            color: #28a745;
+            margin-bottom: 20px;
+            animation: scaleIn 0.6s ease-out;
+        }
+        .success-message h1 {
+            font-size: 2rem;
+            color: var(--text-color);
+            margin-bottom: 10px;
+        }
+        .success-message p {
+            font-size: 1.1rem;
+            color: var(--text-color);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .success-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .btn {
+            padding: 12px 30px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .btn-primary {
+            background-color: var(--button-background);
+            color: white;
+        }
+        .btn-primary:hover {
+            background-color: var(--button-hover-background);
+            transform: translateY(-2px);
+        }
+        .countdown {
+            color: var(--text-color);
+            opacity: 0.7;
+            font-size: 0.9rem;
+            margin-top: 20px;
+        }
+        @keyframes scaleIn {
+            from {
+                transform: scale(0);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
         }
     </style>
 </head>
 <body>
-    <h3>Ihre Nachricht wurde erfolgreich gesendet. Wir werden Sie so schnell wie möglich kontaktieren!</h3>
-    <p>Sie werden in 5 Sekunden zur Startseite weitergeleitet...</p>
+    <nav class="navbar">
+        <div class="hamburger" aria-label="Toggle navigation" aria-expanded="false" role="button" tabindex="0">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <span class="company-name">Elektro Damas</span>
+        <ul class="nav-list">
+            <li><a href="index.html#company"><i class="fa-solid fa-address-card"></i> Unternehmen</a></li>
+            <li><a href="index.html#services"><i class="fa-solid fa-screwdriver-wrench"></i> Service</a></li>
+            <li><a href="index.html#contact"><i class="fa-solid fa-envelope"></i> Kontakt</a></li>
+        </ul>
+        <button id="dark-mode-toggle" aria-label="Switch to dark mode">
+            <i class="fa-solid fa-moon"></i>
+        </button>
+    </nav>
+
+    <main>
+        <div class="success-container">
+            <div class="success-icon">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <div class="success-message">
+                <h1>Nachricht erfolgreich gesendet!</h1>
+                <p>Vielen Dank für Ihre Kontaktaufnahme. Wir werden Sie so schnell wie möglich kontaktieren.</p>
+                <div class="success-buttons">
+                    <a href="index.html" class="btn btn-primary">Zurück zur Startseite</a>
+                    <a href="index.html#contact" class="btn btn-primary">Weitere Informationen</a>
+                </div>
+                <div class="countdown">
+                    Sie werden in <span id="countdown">5</span> Sekunden zur Startseite weitergeleitet...
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div id="impressum">
+            <div class="left-col">
+                <p>
+                    <strong>Elektro Damas</strong>
+                    <br>
+                    Inhaber: Elektromeister Abdul Shaaban
+                    <br>
+                    Ust-Id: DE 366153685
+                </p>
+            </div>
+            <div class="right-col">
+                <p>Weyerstege 13
+                    <br>
+                    47533 Kleve
+                    <br>
+                    <i class="fa-solid fa-phone"></i> 02821-8383073
+                    <br>
+                    <a href="mailto:info@elektro-damas.de" target="_blank"><i class="fa-solid fa-envelope"></i>
+                        info@elektro-damas.de</a>
+                </p>
+            </div>
+        </div>
+        <p class="copy-right">&copy; <span id="copyright-year">2025</span> Elektro Damas. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Countdown and redirect
+        let seconds = 5;
+        const countdownElement = document.getElementById('countdown');
+        
+        const interval = setInterval(() => {
+            seconds--;
+            if (countdownElement) {
+                countdownElement.textContent = seconds;
+            }
+            if (seconds <= 0) {
+                clearInterval(interval);
+                window.location.href = 'index.html';
+            }
+        }, 1000);
+    </script>
 </body>
 </html>
