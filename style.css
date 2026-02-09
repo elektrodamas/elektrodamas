@@ -962,6 +962,11 @@ form button:disabled {
 
 /* Responsive Styles */
 @media (max-width: 768px) {
+    .hero-text {
+        background: linear-gradient(135deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%);
+        background-attachment: unset;
+    }
+
     .company-name {
         display: block;
         font-weight: 700;
