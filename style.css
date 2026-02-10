@@ -1215,11 +1215,13 @@ form button:disabled {
     .contact-cta-buttons {
         flex-direction: column;
         gap: 15px;
+        align-items: center;
     }
 
     .contact-btn {
-        width: 100%;
-        max-width: 100%;
+        width: auto;
+        max-width: 90%;
+        min-width: 200px;
     }
 }
 
