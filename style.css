@@ -762,6 +762,134 @@ footer #impressum a:hover {
     text-align: center;
 }
 
+/* Contact CTA Buttons */
+.contact-cta-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.contact-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 16px 28px;
+    background: var(--primary-color);
+    color: var(--button-text);
+    text-decoration: none;
+    border-radius: var(--border-radius-md);
+    font-weight: 700;
+    font-size: 1rem;
+    transition: var(--transition-standard);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border: 2px solid var(--primary-color);
+    max-width: 200px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.contact-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: left 0.3s ease;
+    z-index: -1;
+}
+
+.contact-btn:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 15px 40px rgba(0, 217, 255, 0.4);
+    background: rgba(0, 217, 255, 0.9);
+}
+
+.contact-btn:hover::before {
+    left: 0;
+}
+
+.contact-btn:active {
+    transform: translateY(-1px);
+}
+
+.contact-btn i {
+    font-size: 1.3rem;
+}
+
+.contact-btn span {
+    display: inline;
+}
+
+.phone-btn:hover {
+    background: #0EA5E9;
+}
+
+.whatsapp-btn {
+    background: #25D366;
+    border-color: #25D366;
+}
+
+.whatsapp-btn:hover {
+    background: #20BA5C;
+    border-color: #20BA5C;
+    box-shadow: 0 15px 40px rgba(37, 211, 102, 0.4);
+}
+
+.email-btn {
+    background: var(--primary-dark);
+    border-color: var(--primary-dark);
+}
+
+.email-btn:hover {
+    background: #0284C7;
+    border-color: #0284C7;
+    box-shadow: 0 15px 40px rgba(2, 132, 199, 0.4);
+}
+
+/* Projects CTA Section */
+.projects-cta {
+    background: linear-gradient(135deg, #22C55E 0%, #00D9FF 50%, #22C55E 100%);
+    color: white;
+    text-align: center;
+    padding: 80px 30px;
+    margin: 80px 20px;
+    border-radius: var(--border-radius-xl);
+    box-shadow: 0 20px 60px rgba(34, 197, 86, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.projects-cta::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    animation: float 6s ease-in-out infinite;
+}
+
+.projects-cta h2 {
+    color: white;
+    margin: 0 0 15px 0;
+    font-size: 2rem;
+}
+
+.projects-cta p {
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 1.1rem;
+    margin-bottom: 35px !important;
+}
+
 .contact-form {
     display: flex;
     flex-direction: row;
@@ -1082,6 +1210,16 @@ form button:disabled {
 
     .reviews-cta h2 {
         font-size: 1.8rem;
+    }
+
+    .contact-cta-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .contact-btn {
+        width: 100%;
+        max-width: 100%;
     }
 }
 
