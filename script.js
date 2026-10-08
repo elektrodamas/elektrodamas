@@ -102,6 +102,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const nameInput = document.getElementById('name');
         const emailInput = document.getElementById('email');
         const messageInput = document.getElementById('message');
+        const privacyInput = document.getElementById('privacy');
         const submitBtn = document.getElementById('submit-btn');
         const formMessage = document.getElementById('form-message');
 
@@ -111,17 +112,22 @@ document.addEventListener("DOMContentLoaded", () => {
             
             if (field === nameInput) {
                 isValid = field.value.trim().length >= 2;
-                errorElement.textContent = isValid ? '' : 'Name must be at least 2 characters';
+                errorElement.textContent = isValid ? '' : 'Bitte geben Sie einen Namen mit mindestens 2 Zeichen ein.';
             } else if (field === emailInput) {
                 const emailRegex = /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/;
                 isValid = emailRegex.test(field.value);
-                errorElement.textContent = isValid ? '' : 'Please enter a valid email address';
+                errorElement.textContent = isValid ? '' : 'Bitte geben Sie eine gültige E-Mail-Adresse ein.';
             } else if (field === messageInput) {
                 isValid = field.value.trim().length >= 10;
-                errorElement.textContent = isValid ? '' : 'Message must be at least 10 characters';
+                errorElement.textContent = isValid ? '' : 'Bitte geben Sie mindestens 10 Zeichen ein.';
+            } else if (field === privacyInput) {
+                isValid = field.checked;
+                errorElement.textContent = isValid ? '' : 'Bitte akzeptieren Sie die Datenschutzerklärung.';
             }
             
-            field.classList.toggle('error', !isValid);
+            if (field !== privacyInput) {
+                field.classList.toggle('error', !isValid);
+            }
             return isValid;
         };
 
@@ -129,6 +135,7 @@ document.addEventListener("DOMContentLoaded", () => {
         nameInput.addEventListener('blur', () => validateField(nameInput, document.getElementById('name-error')));
         emailInput.addEventListener('blur', () => validateField(emailInput, document.getElementById('email-error')));
         messageInput.addEventListener('blur', () => validateField(messageInput, document.getElementById('message-error')));
+        privacyInput.addEventListener('change', () => validateField(privacyInput, document.getElementById('privacy-error')));
 
         contactForm.addEventListener('submit', async (e) => {
             e.preventDefault();
@@ -141,10 +148,11 @@ document.addEventListener("DOMContentLoaded", () => {
             const isNameValid = validateField(nameInput, document.getElementById('name-error'));
             const isEmailValid = validateField(emailInput, document.getElementById('email-error'));
             const isMessageValid = validateField(messageInput, document.getElementById('message-error'));
+            const isPrivacyValid = validateField(privacyInput, document.getElementById('privacy-error'));
 
-            if (!isNameValid || !isEmailValid || !isMessageValid) {
+            if (!isNameValid || !isEmailValid || !isMessageValid || !isPrivacyValid) {
                 formMessage.className = 'form-message error';
-                formMessage.textContent = 'Please fix the errors above before submitting.';
+                formMessage.textContent = 'Bitte korrigieren Sie die markierten Felder, bevor Sie senden.';
                 return;
             }
 
